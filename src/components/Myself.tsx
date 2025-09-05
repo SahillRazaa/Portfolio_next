@@ -39,7 +39,7 @@ const Myself = () => {
               Currently building a full-stack hostel portal for my own college — something the admin staff can actually use to manage everything from student room allotments to fee records, buildings, and wardens.
             </p>
             <p>
-              The system is being built from the ground up with a React + Vite dashboard, backed by a Node.js server and PostgreSQL database using Sequelize. I've already designed and integrated 10+ relational tables (and counting), covering key hostel workflows.
+              The system is being built from the ground up with a React + Vite dashboard, backed by a Node.js server and PostgreSQL database using Sequelize. I&apos;ve already designed and integrated 10+ relational tables (and counting), covering key hostel workflows.
             </p>
             <p>
               It includes secure role-based access, so different users, from wardens to the Super Admin, can log in and manage only what they're supposed to. It&apos;s one of the biggest real-world apps I&apos;ve worked on so far, and it&apos;s teaching me a lot about structuring large-scale backend logic and database relationships.
