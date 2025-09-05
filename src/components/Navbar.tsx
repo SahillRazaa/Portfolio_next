@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <Link href="/" className="flex items-center gap-2.5 cursor-pointer">
           <Image src={MyLogo} alt="My Logo" width={30} height={30} />
-          <p className="text-black text-xl font-medium">Sahil Raza</p>
+          <p className="text-black text-xl font-medium font-heading">Sahil Raza</p>
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8 list-none m-0 p-0">
@@ -32,7 +32,7 @@ const Navbar = () => {
             <li key={item}>
               <Link
                 href={getLinkHref(item)}
-                className="no-underline text-zinc-800 font-medium text-lg transition-all duration-300 ease-in-out py-2.5 border-b border-transparent hover:text-blue-600 hover:border-b hover:border-blue-600"
+                className="no-underline text-zinc-800 font-medium text-lg transition-all duration-300 ease-in-out py-2.5 border-b border-transparent hover:text-blue-600 hover:border-b hover:border-blue-600 font-body"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
@@ -47,7 +47,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="py-2.5 px-6 rounded-full bg-blue-600 cursor-pointer text-white font-semibold no-underline flex items-center gap-2 border-2 border-transparent transition-all duration-300 ease-in-out hover:bg-transparent hover:text-blue-600 hover:border-blue-600">
+            <button className="py-2.5 px-6 rounded-full bg-blue-600 cursor-pointer text-white font-semibold no-underline flex items-center gap-2 border-2 border-transparent transition-all duration-300 ease-in-out hover:bg-transparent hover:text-blue-600 hover:border-blue-600 font-body">
               Resume
             </button>
           </a>
@@ -68,7 +68,6 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           />
           <div className="fixed top-0 right-0 w-2/5 h-screen bg-white/95 backdrop-blur-lg shadow-[-5px_0_30px_rgba(0,0,0,0.1)] p-8 pt-24 flex flex-col gap-8 z-50 rounded-l-2xl transition-transform duration-300 ease-in-out md:w-3/5">
-            {/* Close Button */}
             <div
               className="absolute top-8 right-8 cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
@@ -76,26 +75,24 @@ const Navbar = () => {
               <X size={28} />
             </div>
 
-            {/* Mobile Nav Items */}
             {menuItems.map((item) => (
               <Link
                 key={item}
                 href={getLinkHref(item)}
-                className="no-underline text-zinc-800 font-medium text-xl transition-all duration-300 ease-in-out py-2.5 border-b border-transparent hover:text-blue-600 hover:border-b hover:border-blue-600"
+                className="no-underline text-zinc-800 font-medium text-xl transition-all duration-300 ease-in-out py-2.5 border-b border-transparent hover:text-blue-600 hover:border-b hover:border-blue-600 font-body"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
               </Link>
             ))}
 
-            {/* Mobile Resume Button */}
             <a
               href="/Sahil_Raza_Ansari_Resume_SDE.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
             >
-              <button className="w-full justify-center py-2.5 px-6 rounded-full bg-blue-600 cursor-pointer text-white font-semibold no-underline flex items-center gap-2 border-2 border-transparent transition-all duration-300 ease-in-out hover:bg-transparent hover:text-blue-600 hover:border-blue-600">
+              <button className="w-full justify-center py-2.5 px-6 rounded-full bg-blue-600 cursor-pointer text-white font-semibold no-underline flex items-center gap-2 border-2 border-transparent transition-all duration-300 ease-in-out hover:bg-transparent hover:text-blue-600 hover:border-blue-600 font-body">
                 Resume
               </button>
             </a>

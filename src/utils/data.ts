@@ -40,7 +40,6 @@ import JupyterImage from '../../public/assets/jupyter.png';
 import WAMS from '../../public/assets/brands/WAMS.png';
 import Certimate from '../../public/assets/brands/certimate.png';
 import IIITDMK from '../../public/assets/brands/iiitdm_logo.png';
-import Ekaura from '../../public/assets/brands/ekaura.png';
 
 // Testimonial Images
 import Selvaraj from '../../public/assets/testimonial_images/selvaraj.jpeg';

@@ -88,11 +88,11 @@ const Contact = () => {
   }, [form, formatEmailMessage]);
 
   return (
-    <section id="contact" className="px-4 sm:px-8 mx-20 md:px-10 py-8">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gray-800 text-center mb-12 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
-        Contact Me
+    <section id="contact" className="px-4 sm:px-8 mx-20 md:px-10 py-8 pt-5">
+      <h2 className="text-2xl sm:text-3xl lg:text-5xl text-gray-800 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full font-bold font-heading mb-16 sm:mb-8">
+        Get in Touch  
       </h2>
-      <div className="bg-white rounded-3xl p-6 sm:p-12 mx-auto shadow-lg relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <div className="bg-white rounded-3xl p-6 sm:p-12 mx-auto shadow-lg relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl font-body">
         <div className="absolute top-[-20px] right-[-20px] bg-blue-600/10 p-4 rounded-full">
           <Send className="w-10 h-10 text-blue-600" />
         </div>

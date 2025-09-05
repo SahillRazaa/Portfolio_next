@@ -10,10 +10,10 @@ const Footer = () => {
     <footer className="h-20 py-5 px-10 my-10 mx-4 sm:mx-20 rounded-full bg-white border border-slate-300 text-black flex items-center justify-between box-border flex-col sm:flex-row gap-4 sm:gap-0 sm:h-auto sm:py-2 sm:px-5 sm:rounded-2xl">
       <div className="hidden lg:flex items-center gap-2.5">
         <Image src={MyLogo} alt="My Logo" width={30} height={30} />
-        <p className="text-black text-lg font-medium">Sahil Raza</p>
+        <p className="text-black text-lg font-medium font-heading">Sahil Raza</p>
       </div>
 
-      <div className="text-sm text-center text-gray-600">
+      <div className="text-sm text-center text-gray-600 font-body">
         &copy; {new Date().getFullYear()} Sahil Raza Ansari. All rights reserved.
       </div>
 

@@ -8,9 +8,9 @@ const Experience = () => {
   const memoizedExperience = useMemo(() => [...experience].reverse(), []);
 
   return (
-    <div id="experience" className="px-4 sm:px-8 md:px-30 py-8">
+    <div id="experience" className="px-4 sm:px-8 md:px-30 py-8 pt-5">
       <div className="bg-white/60 rounded-3xl p-8 border border-black/10 shadow-lg flex-1">
-        <h3 className="text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+        <h3 className="text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full font-heading">
           Experience
         </h3>
         <div>
@@ -28,18 +28,18 @@ const Experience = () => {
                   />
                 </div>
                 <div className="flex-1 flex flex-col justify-center">
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-800 m-0 mb-1 leading-tight">
+                  <h4 className="text-lg lg:text-xl font-bold text-gray-800 m-0 mb-1 leading-tight font-heading">
                     {item.title}
                   </h4>
-                  <p className="text-base lg:text-lg text-blue-600 m-0 mb-1 font-medium">
+                  <p className="text-base lg:text-lg text-blue-600 m-0 mb-1 font-medium font-heading">
                     {item.role}
                   </p>
-                  <span className="text-sm lg:text-base text-gray-500 w-full lg:w-11/12 text-justify leading-normal">
+                  <span className="text-sm lg:text-base text-gray-500 w-full lg:w-11/12 text-justify leading-normal font-body">
                     {item.description}
                   </span>
                 </div>
               </div>
-              <div className="mt-4 lg:mt-0 flex flex-col items-start lg:items-end flex-shrink-0 min-w-[150px]">
+              <div className="mt-4 lg:mt-0 flex flex-col items-start lg:items-end flex-shrink-0 min-w-[150px] font-body">
                 <div className="font-bold text-sm lg:text-base text-gray-500">
                   {item.date}
                 </div>

@@ -36,11 +36,11 @@ const AllProjects = () => {
       <Navbar />
       <main className="px-4 sm:px-8 md:px-30 py-8 pb-8 relative">
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
-          <h2 className="text-4xl text-gray-800 relative pb-3 mb-6 md:mb-0 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-blue-600 after:rounded-full">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl text-gray-800 relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full font-bold font-heading">
             All Projects
           </h2>
           <div className="flex items-center gap-4 md:gap-6">
-            <div className="flex bg-slate-200 rounded-lg overflow-hidden">
+            <div className="flex bg-slate-200 rounded-lg overflow-hidden font-body shadow">
               <button
                 onClick={() => setActiveType('Personal')}
                 className={`py-2 px-4 font-semibold transition-colors duration-300 ${activeType === 'Personal' ? 'bg-blue-600 text-white' : 'bg-white text-gray-800 hover:bg-blue-100'}`}
@@ -71,7 +71,7 @@ const AllProjects = () => {
 
         {filteredProjects.length > 0 ? (
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-12"
+            className="grid grid-cols-1 md:grid-cols-2 gap-12 font-body font-medium"
             initial="hidden"
             animate="visible"
             variants={{

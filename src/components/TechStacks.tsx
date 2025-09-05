@@ -6,9 +6,9 @@ import { techStack } from '@/utils/data';
 
 const TechStacks = () => {
   return (
-    <div id="tech" className="px-4 sm:px-8 md:px-30 py-8">
+    <div id="tech" className="px-4 sm:px-8 md:px-30 py-8 pt-5">
       <div className="bg-white/60 rounded-3xl p-8 border border-black/10 shadow-lg flex-1">
-        <h3 className="text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+        <h3 className="text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full font-heading">
           Technologies
         </h3>
         <div className="w-full overflow-hidden relative py-4">

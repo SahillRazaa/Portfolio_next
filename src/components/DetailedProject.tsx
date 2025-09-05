@@ -24,7 +24,7 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
   if (!project) {
     return (
       <div className="min-h-[calc(100vh-320px)] flex items-center justify-center">
-        <p className="text-xl font-medium">Project not found.</p>
+        <p className="text-xl font-medium font-body">Project not found.</p>
       </div>
     );
   }
@@ -42,22 +42,26 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
       >
         <header className="flex flex-col md:flex-row justify-between gap-8">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl m-0 mb-2.5">{project.headline}</h1>
-            <p className="text-lg sm:text-xl m-0">{project.description}</p>
+            <h1 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl m-0 mb-2.5">
+              {project.headline}
+            </h1>
+            <p className="font-body text-lg sm:text-xl m-0">
+              {project.description}
+            </p>
           </div>
           <div className="flex flex-col gap-4 items-start md:items-end">
             <div className="flex gap-2.5">
               <button
                 onClick={() => goToProject(currentIndex - 1)}
                 disabled={currentIndex === 0}
-                className="bg-gray-700 text-white py-2 px-5 border-none rounded-lg cursor-pointer text-base disabled:bg-gray-300 disabled:cursor-not-allowed"
+                className="bg-gray-700 text-white py-2 px-5 border-none rounded-lg cursor-pointer text-base disabled:bg-gray-300 disabled:cursor-not-allowed font-body"
               >
                 Previous
               </button>
               <button
                 onClick={() => goToProject(currentIndex + 1)}
                 disabled={currentIndex === projectDetails.length - 1}
-                className="bg-gray-700 text-white py-2 px-5 border-none rounded-lg cursor-pointer text-base disabled:bg-gray-300 disabled:cursor-not-allowed"
+                className="bg-gray-700 text-white py-2 px-5 border-none rounded-lg cursor-pointer text-base disabled:bg-gray-300 disabled:cursor-not-allowed font-body"
               >
                 Next
               </button>
@@ -67,7 +71,7 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2.5 px-6 rounded-lg bg-blue-600 text-white font-semibold no-underline flex items-center justify-center gap-2 border-2 border-transparent transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/50"
+                className="py-2.5 px-6 rounded-lg bg-blue-600 text-white font-semibold no-underline flex items-center justify-center gap-2 border-2 border-transparent transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/50 font-body"
               >
                 <FaLink />
                 Link
@@ -77,12 +81,12 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
         </header>
 
         <div>
-          <h2 className="text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+          <h2 className="font-heading text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
             Key Features
           </h2>
           <ul className="list-none p-0 flex flex-wrap gap-4">
             {project.features.map((feat, i) => (
-              <li key={i} className="flex items-center gap-2 bg-green-100 text-green-800 py-2 px-4 rounded-lg text-base">
+              <li key={i} className="flex items-center gap-2 bg-green-100 text-green-800 py-2 px-4 rounded-lg text-base font-body">
                 <FaCheckCircle /> {feat}
               </li>
             ))}
@@ -90,7 +94,7 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+          <h2 className="font-heading text-2xl font-bold text-blue-600 mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
             Tech Stack
           </h2>
           <div className="flex flex-wrap gap-8">
@@ -107,7 +111,6 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
         </div>
       </motion.div>
 
-      {/* Grid for Problem, Challenges, etc. */}
       <motion.div
         className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-5"
         initial="hidden"
@@ -119,23 +122,35 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           className="bg-white/60 backdrop-blur-xl rounded-3xl border border-slate-300 shadow-lg p-6 lg:p-10"
         >
-          <h3 className="text-2xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">Problem Statement</h3>
-          <p className="text-base text-black leading-relaxed">{project.problemStatement}</p>
+          <h3 className="font-heading text-2xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+            Problem Statement
+          </h3>
+          <p className="font-body text-base text-black leading-relaxed">
+            {project.problemStatement}
+          </p>
         </motion.div>
         <div className="flex flex-col gap-5">
           <motion.div
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="bg-white/60 backdrop-blur-xl rounded-3xl border border-slate-300 shadow-lg p-6 lg:p-8 flex-1"
           >
-            <h3 className="text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">Challenges</h3>
-            <p className="text-base text-black leading-relaxed">{project.challenges}</p>
+            <h3 className="font-heading text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+              Challenges
+            </h3>
+            <p className="font-body text-base text-black leading-relaxed">
+              {project.challenges}
+            </p>
           </motion.div>
           <motion.div
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="bg-white/60 backdrop-blur-xl rounded-3xl border border-slate-300 shadow-lg p-6 lg:p-8 flex-1"
           >
-            <h3 className="text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">Solution Approach</h3>
-            <p className="text-base text-black leading-relaxed">{project.solutionApproach}</p>
+            <h3 className="font-heading text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+              Solution Approach
+            </h3>
+            <p className="font-body text-base text-black leading-relaxed">
+              {project.solutionApproach}
+            </p>
           </motion.div>
         </div>
         <div className="flex flex-col gap-5">
@@ -143,15 +158,23 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="bg-white/60 backdrop-blur-xl rounded-3xl border border-slate-300 shadow-lg p-6 lg:p-8 flex-1"
           >
-            <h3 className="text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">Learnings</h3>
-            <p className="text-base text-black leading-relaxed">{project.learning}</p>
+            <h3 className="font-heading text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+              Learnings
+            </h3>
+            <p className="font-body text-base text-black leading-relaxed">
+              {project.learning}
+            </p>
           </motion.div>
           <motion.div
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="bg-white/60 backdrop-blur-xl rounded-3xl border border-slate-300 shadow-lg p-6 lg:p-8 flex-1"
           >
-            <h3 className="text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">Impact</h3>
-            <p className="text-base text-black leading-relaxed">{project.impact}</p>
+            <h3 className="font-heading text-xl font-bold text-blue-600 mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-blue-600 after:rounded-full">
+              Impact
+            </h3>
+            <p className="font-body text-base text-black leading-relaxed">
+              {project.impact}
+            </p>
           </motion.div>
         </div>
       </motion.div>
@@ -166,7 +189,11 @@ const DetailedProject = ({ project }: DetailedProjectProps) => {
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           transition={{ delay: index * 0.1 }}
         >
-          <Image src={item} alt={`Project Preview ${index}`} className="w-full rounded-2xl" />
+          <Image
+            src={item}
+            alt={`Project Preview ${index}`}
+            className="w-full rounded-2xl"
+          />
         </motion.div>
       ))}
     </motion.div>
